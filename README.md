@@ -1,37 +1,158 @@
-## Deploy JSON Server to Vercel
+## Jobs Portal Web App Backend 
 
-A template to deploy [JSON Server](https://github.com/typicode/json-server) to [Vercel](https://vercel.com), allow you to run fake REST API online!
+* This is the Backend Live Link for the Jobs Portal Web App repository. 
 
-Demo from this repository: 
+## Live Link
+* https://jobs-portal-json-server-vercel.vercel.app/
 
-1. https://json-server-in.vercel.app
-2. https://json-server-in.vercel.app/api/posts
-
-### How to use
-
-1. Click "**Use this template**" or clone this repository.
-2. Update or use the default [`db.json`](./db.json) in the repository.
-3. Sign Up or login into [Vercel](https://vercel.com).
-4. From the Vercel dashboard, click "**+ New Project**" then "**Import**" your repository.
-5. In the "**Configure Project**" screen, leave everything default and click "**Deploy**".
-6. Wait until deployment is done, and your own JSON server is ready to serve!
-
-## Default `db.json`
+## Jobs Data in the `db.json`
 
 ```json
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+  "jobs": [
+    {
+    "id": 1,
+    "company_name": "Aguirre and Rodgers Plc",
+    "company_phone": "+254717255460",
+    "company_website": "https://www.hiqu.us",
+    "company_linkedin": "https://www.xekela.mobi",
+    "company_logo": "A",
+    "company_location": "Mombasa",
+    "title": "Web Developer",
+    "category_id": 1,
+    "salary_range": "120000 - 300000",
+    "job_type": "Full Time",
+    "job_description": "<p>We are looking for an experienced Back-end and Front end developer...",
+    "location": "Mombasa",
+    "application_deadline": "28-12-2022",
+    "experience": "3 years",
+    "qualification": "Bachelor's Degree",
+    "link_to_job": "https://www.jusoxoh.in",
+    "user_id": 1,
+    "created_at": "2023-06-14T13:39:57.663Z"
+    },
+    {
+    "id": 2,
+    "company_name": "Match Company Limited",
+    "company_phone": "+254704592362",
+    "company_website": "https://www.matchcompany.com",
+    "company_linkedin": "https://www.xekela.mobi",
+    "company_logo": "C",
+    "company_location": "Nairobi",
+    "title": "UI/UX Designer",
+    "category_id": 3,
+    "salary_range": "200,000 - 350,000",
+    "job_type": "Full Time",
+    "job_description": "<p>We are looking for an experienced Back-end and Front end developer...",
+    "location": "Nairobi",
+    "application_deadline": "2-01-2023",
+    "experience": "2 years",
+    "qualification": "Bachelor's Degree",
+    "link_to_job": "https://www.jusoxoh.in",
+    "user_id": 2,
+    "created_at": "2023-06-14T13:39:57.766Z"
+    },
+    {
+    "id": 3,
+    "company_name": "MWN Developers",
+    "company_phone": "+254711223344",
+    "company_website": "https://www.hiqu.us",
+    "company_linkedin": "https://www.xekela.mobi",
+    "company_logo": "M",
+    "company_location": "Nakuru",
+    "title": "Software Developer",
+    "category_id": 2,
+    "salary_range": "400000 - 500000",
+    "job_type": "Part Time",
+    "job_description": "<p>We are looking for an experienced Back-end and Front end developer...",
+    "location": "Nakuru",
+    "application_deadline": "15-12-2022",
+    "experience": "5 years",
+    "qualification": "Bachelor's Degree",
+    "link_to_job": "https://www.jusoxoh.in",
+    "user_id": 2,
+    "created_at": "2023-06-14T13:39:57.916Z"
+    },
+    {
+    "id": 4,
+    "company_name": "Underdog IO",
+    "company_phone": "+254755667788",
+    "company_website": "https://www.hiqu.us",
+    "company_linkedin": "https://www.xekela.mobi",
+    "company_logo": "U",
+    "company_location": "Kisumu",
+    "title": "Technical Mentor",
+    "category_id": 1,
+    "salary_range": "80000 - 100000",
+    "job_type": "Full Time",
+    "job_description": "<p>We are looking for an experienced Back-end and Front end developer...",
+    "location": "Kisumu",
+    "application_deadline": "30-12-2022",
+    "experience": "1 year",
+    "qualification": "Bachelor's Degree",
+    "link_to_job": "https://www.jusoxoh.in",
+    "user_id": 3,
+    "created_at": "2023-06-14T13:39:58.050Z"
+    },
+    {
+    "id": 5,
+    "company_name": "Turing",
+    "company_phone": "+25479900332277",
+    "company_website": "https://www.hiqu.us",
+    "company_linkedin": "https://www.xekela.mobi",
+    "company_logo": "T",
+    "company_location": "US",
+    "title": "Backend Engineer",
+    "category_id": 1,
+    "salary_range": "120000 - 300000",
+    "job_type": "Full Time",
+    "job_description": "<p>We are looking for an experienced Back-end and Front end developer...",
+    "location": "US",
+    "application_deadline": "14-02-2023",
+    "experience": "3 years",
+    "qualification": "Bachelor's Degree",
+    "link_to_job": "https://www.jusoxoh.in",
+    "user_id": 1,
+    "created_at": "2023-06-14T13:39:58.207Z"
+    }
   ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+
+  "categories": [
+    {
+    "id": 1,
+    "name": "Technology",
+    "description": "Jobs related to Web Developer, Database Admin and Computer System Admin"
+    },
+    {
+    "id": 2,
+    "name": "Medical",
+    "description": "Jobs related to Doctor, Nurse, Paramedic and Veterinarian"
+    },
+    {
+    "id": 3,
+    "name": "Education",
+    "description": "Jobs related to College Professor, Technical Mentor and Instructional Coordinator"
+    },
+    {
+    "id": 4,
+    "name": "Business",
+    "description": "Jobs related to Accountant, Human Resource Specialist and Market Research Analyst"
+    },
+    {
+    "id": 5,
+    "name": "Aviation",
+    "description": "Jobs related to Airline Pilot, Flight Attendant and Federal Air Marshal"
+    },
+    {
+    "id": 6,
+    "name": "Arts",
+    "description": "Jobs related to Actor, Director, Composer, Musician and Singer"
+    }
+  ]
 }
+
 ```
 
-## Reference
-
-1. https://github.com/typicode/json-server
-2. https://vercel.com
-3. https://shadowsmith.com/how-to-deploy-an-express-api-to-vercel
+## Support and contact details
+* Email: developer.njihia@gmail.com
+* Phone: 0704592362
